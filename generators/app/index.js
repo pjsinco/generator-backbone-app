@@ -41,13 +41,13 @@ var BackboneApp = generators.Base.extend({
     scaffoldFolders: function() {
         mkdirp.sync('./src');
         mkdirp.sync('./src/img');
-        mkdirp.sync('./src/js');
-        mkdirp.sync('./src/js/models');
-        mkdirp.sync('./src/js/views');
-        mkdirp.sync('./src/js/collections');
-        mkdirp.sync('./src/js/routers');
-        mkdirp.sync('./src/js/util');
-        mkdirp.sync('./src/js/vendor');
+        mkdirp.sync('./src/scripts');
+        mkdirp.sync('./src/scripts/models');
+        mkdirp.sync('./src/scripts/views');
+        mkdirp.sync('./src/scripts/collections');
+        mkdirp.sync('./src/scripts/routers');
+        mkdirp.sync('./src/scripts/util');
+        mkdirp.sync('./src/scripts/vendor');
 
         if (this.addSass) {
             mkdirp.sync('./src/sass');
@@ -69,7 +69,7 @@ var BackboneApp = generators.Base.extend({
         this.template('_package.json', 'package.json');
     
         this.copy('_bower.json', 'bower.json');
-        this.copy('_main.js', './src/js/main.js');
+        this.copy('_main.js', './src/scripts/main.js');
 
         if (this.addSass) {
             this.copy('_style.scss', './src/sass/_style.scss');
