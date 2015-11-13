@@ -1,5 +1,19 @@
 {
   "name": "<%= appName %>",
   "version": "0.0.1",
-  "dependencies": {}
+  "dependencies": {
+
+    "underscore": "*",
+    "jquery": "*",
+    "backbone": "*",
+    "browser-sync": "*",
+    "browserify": "*",
+    "gulp": "*",
+    "gulp-jshint": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*"
+    }
 }

@@ -6,7 +6,7 @@ var helpers = require('yeoman-generator').test;
 var os = require('os');
 
 describe('backbone-app:app', function () {
-  before(function (done) {
+  beforeEach(function (done) {
     helpers.run(path.join(__dirname, '../generators/app'))
       .withOptions({ skipInstall: true })
       .withPrompts({ someOption: true })
@@ -15,10 +15,16 @@ describe('backbone-app:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'bower.json',
+      'index.html',
+      'src/sass/_style.scss',
+      'src/sass/base/_index.scss',
+      'src/sass/layout/_index.scss',
+      'src/sass/modules/_index.scss',
+      'src/sass/utilities/_index.scss',
       'package.json',
-      '.editorconfig',
-      '.jshintrc'
+      //'.editorconfig',
+      //'.jshintrc'
     ]);
   });
+
 });

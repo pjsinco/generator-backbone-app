@@ -99,6 +99,17 @@ var BackboneApp = yeoman.generators.Base.extend({
             this.destinationPath('./src/sass/_style.scss')
         );
 
+
+        /**
+         * Copy package.json
+         *
+         */
+        this.fs.copyTpl(
+            this.templatePath('_package.json'),
+            this.destinationPath('package.json'),
+            context
+        );
+
     },
 });
 
