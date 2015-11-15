@@ -10,6 +10,7 @@
     "browserify": "*",
     "gulp": "*",
     "gulp-jshint": "*",
+    "gulp-autoprefixer": "*",
     "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",

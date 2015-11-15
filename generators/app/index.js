@@ -110,6 +110,15 @@ var BackboneApp = yeoman.generators.Base.extend({
             context
         );
 
+        /**
+         * Copy .gitignore
+         *
+         */
+
+        this.fs.copy(
+            this.templatePath('.gitignore'),
+            this.destinationPath()
+        );
     },
 });
 

@@ -22,6 +22,7 @@ describe('backbone-app:app', function () {
       'src/sass/modules/_index.scss',
       'src/sass/utilities/_index.scss',
       'package.json',
+      '.gitignore',
       //'.editorconfig',
       //'.jshintrc'
     ]);
