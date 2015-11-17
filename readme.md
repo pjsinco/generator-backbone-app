@@ -6,3 +6,7 @@
 #####Wed Nov 11 05:01:32 2015 CST
 * Inspirations for a generator
     * Github: [generator-learnfe](https://github.com/LearnFrontEnd/generator-learnfe)
+
+#####Tue Nov 17 05:44:07 2015 CST
+* Run tests:
+    ```npm run test```

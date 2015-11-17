@@ -10,8 +10,6 @@ var BackboneApp = yeoman.generators.Base.extend({
 
         var done = this.async();
 
-        console.log(this.yeoman);
-
         var prompts = [{
             name: 'appName',
             message: 'What is your app\'s name?',
@@ -59,6 +57,15 @@ var BackboneApp = yeoman.generators.Base.extend({
             this.destinationPath('index.html'),
             context
         );
+        
+        /**
+         * Copy JS
+         *
+         */
+        this.fs.copy(
+            this.templatePath('_main.js'),
+            this.destinationPath('./src/scripts/main.js')
+        );
 
         /**
          * Copy Sass files
@@ -96,7 +103,7 @@ var BackboneApp = yeoman.generators.Base.extend({
 
         this.fs.copy(
             this.templatePath('_style.scss'),
-            this.destinationPath('./src/sass/_style.scss')
+            this.destinationPath('./src/sass/style.scss')
         );
 
 
@@ -111,14 +118,41 @@ var BackboneApp = yeoman.generators.Base.extend({
         );
 
         /**
+         * Copy gulpfile.js
+         *
+         */
+        this.fs.copy(
+            this.templatePath('_gulpfile.js'),
+            this.destinationPath('gulpfile.js')
+        );
+
+        /**
          * Copy .gitignore
          *
          */
-
         this.fs.copy(
-            this.templatePath('.gitignore'),
-            this.destinationPath()
+            this.templatePath('_gitignore'),
+            this.destinationPath('.gitignore')
         );
+
+        /**
+         * Copy config.rb
+         *
+         */
+//        this.fs.copy(
+//            this.templatePath('_config.rb'),
+//            this.destinationPath('config.rb')
+//        );
+
+        /**
+         * Copy readme.md
+         *
+         */
+        this.fs.copy(
+            this.templatePath('_readme.md'),
+            this.destinationPath('readme.md')
+        );
+    
     },
 });
 

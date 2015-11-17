@@ -1,5 +1,9 @@
-var Backbone = require('backbone'),
-var Backbone.$ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = require('jquery');
 
 
-module.exports = {};
+Backbone.$(document).ready(function() {
+
+    console.log('hiya');
+
+});

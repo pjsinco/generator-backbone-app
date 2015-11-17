@@ -16,12 +16,13 @@ describe('backbone-app:app', function () {
   it('creates files', function () {
     assert.file([
       'index.html',
-      'src/sass/_style.scss',
+      'src/sass/style.scss',
       'src/sass/base/_index.scss',
       'src/sass/layout/_index.scss',
       'src/sass/modules/_index.scss',
       'src/sass/utilities/_index.scss',
       'package.json',
+      'gulpfile.js',
       '.gitignore',
       //'.editorconfig',
       //'.jshintrc'
